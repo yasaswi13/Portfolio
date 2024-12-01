@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <div id="header">
+        <div class="header">
+            <p>Full Stack Web Developer</p>
+            <h1>Hi, I'm <span>AVL Yasaswi </span></h1>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about">
+        <h2>About Me</h2>
+        <div class="row">
+            <div class="col1">
+                <img src="img2.jpeg" alt="About Me Image">
+            </div>
+            <div class="col2">
+                <p>
+                    I am a hardworking and creative individual. I am punctual and willing to learn new skills. I am able
+                    to work independently in busy environments and also within a team. I am also good at solving
+                    problems.
+                </p>
+                <div class="tabs">
+                    <p class="links active" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="links" onclick="opentab(event, 'education')">Education</p>
+                </div>
+                <div class="tabs-content">
+                    <div id="skills" class="tab active">
+                        <ul>
+                            <li><span>Web Development:</span> Full Stack</li>
+                            <li><span>Coding:</span> Python</li>
+                        </ul>
+                    </div>
+                    <div id="experience" class="tab">
+                        <ul>
+                            <li><span>2022-2023:</span> Graduate Engineer Trainee, Jio</li>
+                        </ul>
+                    </div>
+                    <div id="education" class="tab">
+                        <ul>
+                            <li><span>2018-2022:</span> B.E. from Pillai College of Engineering</li>
+                            <li><span>2016-2018:</span> HSC from J.H. Ambani</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <h2>My Services</h2>
+        <div class="s3">
+            <div>
+                <h3>Web Design</h3>
+                <p>I can design creative and attractive websites.</p>
+            </div>
+            <div>
+                <h3>Testing</h3>
+                <p>I can perform sanity and regression testing for apps and websites.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <h2>My Work</h2>
+        <div class="s4">
+            <div class="s4w">
+                <img src="img3.jpg" alt="Portfolio 1">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>Made using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="s4w">
+                <img src="img4.png" alt="Portfolio 2">
+                <div class="layer">
+                    <h3>To-Do List App</h3>
+                    <p>Built with HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <h2>Contact Me</h2>
+        <div class="row">
+            <div class="cl">
+                <p>Email: yasaswi433@gmail.com</p>
+                <p>Phone: 7507694950</p>
+                <a href="doc1.pdf" download class="btn2">Download CV</a>
+            </div>
+            <div class="cr">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function opentab(event, tabname) {
+            const links = document.querySelectorAll('.tabs .links');
+            const tabs = document.querySelectorAll('.tabs-content .tab');
+
+            links.forEach(link => link.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabname).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
